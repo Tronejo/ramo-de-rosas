@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ramo de Rosas</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .bouquet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      width: 300px;
+    }
+
+    .rose {
+      position: relative;
+      width: 40px;
+      height: 100px;
+      margin: 5px;
+    }
+
+    .stem {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      height: 60px;
+      background-color: green;
+      transform: translateX(-50%);
+    }
+
+    .petal {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 30px solid red;
+      transform: translateX(-50%);
+    }
+
+    .petal::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 30px solid red;
+    }
+
+    .petal::after {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 30px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div class="bouquet">
+    <div class="rose">
+      <div class="stem"></div>
+      <div class="petal"></div>
+    </div>
+    <div class="rose">
+      <div class="stem"></div>
+      <div class="petal" style="border-bottom-color: pink;"></div>
+    </div>
+    <div class="rose">
+      <div class="stem"></div>
+      <div class="petal" style="border-bottom-color: purple;"></div>
+    </div>
+    <div class="rose">
+      <div class="stem"></div>
+      <div class="petal" style="border-bottom-color: yellow;"></div>
+    </div>
+    <div class="rose">
+      <div class="stem"></div>
+      <div class="petal" style="border-bottom-color: orange;"></div>
+    </div>
+  </div>
+</body>
+</html>
